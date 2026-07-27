@@ -18,8 +18,9 @@ public class Loja {
         System.out.println("Quantity in stock: ");
         product.quantity = sc.nextInt();
 
-        System.out.println(product.name + ", "
-                + product.price + ", "
-                + product.quantity);
+        //toString
+        System.out.println(product);
+
+        sc.close();
     }
 }
