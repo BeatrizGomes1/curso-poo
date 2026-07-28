@@ -1,24 +1,26 @@
-package application;
+package application_capitulo8;
 
-import entities.CalculatorStatic;
+import entities_capitulo8.Calculator;
 
 import java.util.Scanner;
 
-public class Versao3 {
+public class Versao2 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        Calculator calc = new Calculator();
+
         System.out.println("Enter radius: ");
         double radius = sc.nextDouble();
 
-        double c = CalculatorStatic.circumference(radius);
+        double c = calc.circumference(radius);
 
-        double v = CalculatorStatic.volume(radius);
+        double v = calc.volume(radius);
 
         System.out.printf("Circumference: %.2f%n", c);
         System.out.printf("Volume: %.2f%n", v);
-        System.out.printf("PI value: %.2f%n", CalculatorStatic.PI);
+        System.out.printf("PI value: %.2f%n", calc.PI);
 
         sc.close();
     }

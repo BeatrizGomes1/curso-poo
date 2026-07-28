@@ -1,6 +1,6 @@
-package application;
+package application_capitulo8;
 
-import entities.Triangle;
+import entities_capitulo8.Triangle;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package application;
+package application_capitulo8;
 
-import entities.Student;
+import entities_capitulo8.Student;
 
 import java.util.Scanner;
 

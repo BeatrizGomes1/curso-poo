@@ -1,6 +1,6 @@
-package application;
+package application_capitulo8;
 
-import entities.Rectangle;
+import entities_capitulo8.Rectangle;
 
 import java.util.Scanner;
 

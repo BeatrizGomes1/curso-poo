@@ -1,6 +1,6 @@
-package application;
+package application_capitulo8;
 
-import entities.CurrencyConverter;
+import entities_capitulo8.CurrencyConverter;
 
 import java.util.Scanner;
 
