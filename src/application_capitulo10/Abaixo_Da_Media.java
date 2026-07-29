@@ -27,7 +27,7 @@ public class Abaixo_Da_Media {
 
         System.out.println("ELEMENTOS ABAIXO DA MÉDIA:");
         for (int i = 0; i < vect.length; i++) {
-            if (vect[i] <= 10) {
+            if (vect[i] < media) {
                 System.out.println(vect[i]);
             }
         }
