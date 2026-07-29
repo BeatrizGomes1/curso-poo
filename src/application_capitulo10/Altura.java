@@ -1,4 +1,4 @@
-package application_capitulo9;
+package application_capitulo10;
 
 import java.util.Scanner;
 
