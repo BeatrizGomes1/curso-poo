@@ -24,11 +24,12 @@ public class Pensionato {
             System.out.println("Room: ");
             int room = sc.nextInt();
 
-            if (vect[room] != null) {
-                System.out.println("Esse quarto já está ocupado!");
-            } else {
-                vect[room] = new Rent(name, email);
+            while (vect[room] != null) {
+                System.out.println("Quarto ocupado! Digite outro número:");
+                room = sc.nextInt();
             }
+
+            vect[room] = new Rent(name, email);
         }
 
         System.out.println();
