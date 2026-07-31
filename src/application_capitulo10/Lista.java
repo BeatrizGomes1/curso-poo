@@ -56,9 +56,9 @@ public class Lista {
             System.out.println(x);
         }
 
-        //Encontrar primeiro elemento que comece com letra A
+        //Encontrar primeiro elemento que comece com letra A, se não exite retorna NULL
         System.out.println("---------------------");
-        String name = list.stream().filter(x -> x.charAt(0) == 'A').findFirst().orElse(null);
+        String name = list.stream().filter(x -> x.charAt(0) == 'J').findFirst().orElse(null);
         System.out.println(name);
 
         sc.close();
