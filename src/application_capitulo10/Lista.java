@@ -39,6 +39,11 @@ public class Lista {
         for (String x : list) {
             System.out.println(x);
         }
+        System.out.println("----------------");
+        //Encontar posição de elemento
+        System.out.println("Index of Anna: " + list.indexOf("Anna"));
+        //Posição de quem nao existe
+        System.out.println("Index of Lais: " + list.indexOf("Lais"));
 
         sc.close();
     }
