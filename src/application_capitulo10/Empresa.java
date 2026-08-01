@@ -35,14 +35,20 @@ public class Empresa {
         System.out.println();
 
         System.out.println("Enter the employee id that will have salary increase : ");
-        int idIncrese = sc.nextInt();
-        Integer pos = position(list, idIncrese);
+        int idIncrease = sc.nextInt();
+        Integer pos = position(list, idIncrease);
         if (pos == null){
             System.out.println("This id does not exits!");
         } else {
             System.out.println("Enter the percentage: ");
             double percent = sc.nextDouble();
             list.get(pos).increaseSalary(percent);
+        }
+
+        System.out.println();
+        System.out.println("List of employees: ");
+        for (Employee emp : list) {
+            System.out.println(emp);
         }
 
         sc.close();
