@@ -22,6 +22,7 @@ public class Loja {
             System.out.println("Produto #" + (i + 1));
             System.out.println("Número do código:");
             int codigo = sc.nextInt();
+            //Verificar se código já foi cadastrado
             while (temCodigo(list, codigo)){
                 System.out.println("Código já cadastrado! Digite novamente:");
                 codigo = sc.nextInt();
@@ -42,6 +43,7 @@ public class Loja {
         System.out.println("Código do produto:");
         int codDesconto = sc.nextInt();
 
+        //Verificar se código existe
         Produto p = list.stream().filter(x -> x.getCodigo() == codDesconto)
                 .findFirst().orElse(null);
 
