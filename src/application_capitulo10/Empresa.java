@@ -18,11 +18,12 @@ public class Empresa {
 
         System.out.println();
 
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             sc.nextLine();
-            System.out.println("Employee #" + i + ":");
+            System.out.println("Employee #" + (i + 1) + ":");
             System.out.println("Id: ");
             int id = sc.nextInt();
+            sc.nextLine();
             System.out.println("Name: ");
             String name = sc.nextLine();
             System.out.println("Salary: ");
