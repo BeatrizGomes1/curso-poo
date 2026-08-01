@@ -35,6 +35,7 @@ public class Empresa {
 
         System.out.println();
 
+        /*
         System.out.println("Enter the employee id that will have salary increase : ");
         int idIncrease = sc.nextInt();
         Integer pos = position(list, idIncrease);
@@ -45,11 +46,26 @@ public class Empresa {
             double percent = sc.nextDouble();
             list.get(pos).increaseSalary(percent);
         }
+         */
+
+        System.out.println("Enter the employee id that will have salary increase : ");
+        int idIncrease = sc.nextInt();
+
+        Employee emp = list.stream().filter(x -> x.getId() == idIncrease)
+                .findFirst().orElse(null);
+
+        if (emp == null){
+            System.out.println("This id does not exits!");
+        } else {
+            System.out.println("Enter the percentage: ");
+            double percent = sc.nextDouble();
+            emp.increaseSalary(percent);
+        }
 
         System.out.println();
         System.out.println("List of employees: ");
-        for (Employee emp : list) {
-            System.out.println(emp);
+        for (Employee e : list) {
+            System.out.println(e);
         }
 
         sc.close();
