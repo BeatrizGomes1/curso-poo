@@ -84,6 +84,7 @@ public class Empresa {
         return null;
     }
 
+    //Verifica se o ID ja foi usado
     public static boolean hasId(List<Employee> list, int id) {
         Employee emp = list.stream().filter(x -> x.getId() == id)
                 .findFirst().orElse(null);
