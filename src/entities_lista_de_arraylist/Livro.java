@@ -28,12 +28,17 @@ public class Livro {
         return quantidade;
     }
 
-    public int emprestar (int estoque){
-        return quantidade - estoque;
+    public void emprestar (int emprestado){
+        if (quantidade > emprestado) {
+            quantidade -= emprestado;
+            System.out.println("Empréstimo feito com sucesso! Quantidade restante: " + quantidade);
+        } else {
+            System.out.println("Erro: Operação cancelada. Estoque insuficiente! (Disponível: " + quantidade);
+        }
     }
 
     @Override
     public String toString(){
-        return codigo + " | " + titulo + " | " + quantidade;
+        return "Código: " + codigo + " | " + "Título: " + titulo + " | " + "Estoque: " + quantidade;
     }
 }
