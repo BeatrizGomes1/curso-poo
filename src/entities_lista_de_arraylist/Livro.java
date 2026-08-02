@@ -29,11 +29,11 @@ public class Livro {
     }
 
     public void emprestar (int emprestado){
-        if (quantidade > emprestado) {
+        if (quantidade >= emprestado) {
             quantidade -= emprestado;
             System.out.println("Empréstimo feito com sucesso! Quantidade restante: " + quantidade);
         } else {
-            System.out.println("Erro: Operação cancelada. Estoque insuficiente! (Disponível: " + quantidade);
+            System.out.println("Erro: Operação cancelada. Estoque insuficiente! (Disponível: " + quantidade + ")");
         }
     }
 
