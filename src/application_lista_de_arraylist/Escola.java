@@ -42,7 +42,7 @@ public class Escola {
         System.out.println();
 
         System.out.println("Digite a matrícula para adicionar pontos extras: ");
-        double matriculaPonto = sc.nextDouble();
+        int matriculaPonto = sc.nextInt();
 
         Aluno a = list.stream().filter(x -> x.getMatricula() == matriculaPonto)
                         .findFirst().orElse(null);
