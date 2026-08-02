@@ -50,7 +50,13 @@ public class Biblioteca {
         } else {
             System.out.println("Digite a quantidade a ser emprestada: ");
             int quant = sc.nextInt();
-            l.emprestar(quant);
+
+            if (l.getQuantidade() >= quant) {
+                l.emprestar(quant);
+                System.out.println("Empréstimo feito com sucesso! Quantidade restante: " + l.getQuantidade());
+            } else {
+                System.out.println("Erro: Operação cancelada. Estoque insuficiente! (Disponível: " + l.getQuantidade() + ")");
+            }
         }
 
         System.out.println();
