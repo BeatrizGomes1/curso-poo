@@ -32,6 +32,7 @@ public class Concessionaria {
             String modelo = sc.nextLine();
             System.out.println("Quilometragem: ");
             int qui = sc.nextInt();
+            sc.nextLine();
 
             Carro c = new Carro(placa, modelo, qui);
             car.add(c);
@@ -46,11 +47,17 @@ public class Concessionaria {
                 .findFirst().orElse(null);
 
         if (c == null){
-            System.out.println("Erro: Veículo com placa" + c.getPlaca() + "não foi encontrado!");
+            System.out.println("Erro: Veículo com placa " + placaQui + " não foi encontrado!");
         } else {
             System.out.println("Km percorridos: ");
             int km = sc.nextInt();
             c.attKm(km);
+        }
+
+        System.out.println();
+        System.out.println("--- FROTA DE VEÍCULOS ---");
+        for (Carro ca : car) {
+            System.out.println(ca);
         }
 
         sc.close();
