@@ -32,7 +32,6 @@ public class Aluno {
         notaFinal += ponto;
 
         if (notaFinal > 100){
-            System.out.println("Pontos adicionados! Nota ajustada para o limite máximo de 100.0");
             notaFinal = 100;
         }
     }

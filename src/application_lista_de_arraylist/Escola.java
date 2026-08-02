@@ -53,6 +53,10 @@ public class Escola {
             System.out.println("Digite a quantidade de pontos: ");
             double pontoExtra = sc.nextDouble();
             a.pontosExtras(pontoExtra);
+
+            if (a.getNotaFinal() == 100) {
+                System.out.println("Pontos adicionados! A nota foi ajustada para o limite máximo de 100.");
+            }
         }
 
         System.out.println();
