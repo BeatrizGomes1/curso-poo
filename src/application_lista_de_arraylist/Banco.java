@@ -71,7 +71,8 @@ public class Banco {
             System.out.println("Digite o valor do saque: ");
             double saque = sc.nextDouble();
             cont.saque(saque);
-            System.out.println("Saque realizado! (Taxa de R$ 5.00 aplicada). Novo saldo: ");
+            System.out.println("Saque realizado! (Taxa de R$ 5.00 aplicada). Novo saldo: "
+                    + String.format("%.2f", cont.getSaldo()));
         }
 
         System.out.println();
