@@ -67,14 +67,15 @@ public class Banco {
         if (cont == null){
             System.out.println("Conta não encontrada!");
         } else {
-            if (cont.getSaldo() > 0) {
-                System.out.println("Digite o valor do saque: ");
-                double saque = sc.nextDouble();
+            System.out.println("Digite o valor do saque: ");
+            double saque = sc.nextDouble();
+
+            if (cont.getSaldo() >= saque + 5.00) {
                 cont.saque(saque);
                 System.out.println("Saque realizado! (Taxa de R$ 5.00 aplicada). Novo saldo: "
                         + String.format("%.2f", cont.getSaldo()));
             } else {
-                System.out.println("Conta sem saldo disponível!");
+                System.out.println("Saldo insuficiente!");
             }
         }
 
