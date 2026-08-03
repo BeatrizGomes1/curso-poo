@@ -1,7 +1,6 @@
 package application_lista_de_arraylist;
 
 import entities_lista_de_arraylist.Conta;
-import entities_lista_de_arraylist.Conta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,11 +67,15 @@ public class Banco {
         if (cont == null){
             System.out.println("Conta não encontrada!");
         } else {
-            System.out.println("Digite o valor do saque: ");
-            double saque = sc.nextDouble();
-            cont.saque(saque);
-            System.out.println("Saque realizado! (Taxa de R$ 5.00 aplicada). Novo saldo: "
-                    + String.format("%.2f", cont.getSaldo()));
+            if (cont.getSaldo() > 0) {
+                System.out.println("Digite o valor do saque: ");
+                double saque = sc.nextDouble();
+                cont.saque(saque);
+                System.out.println("Saque realizado! (Taxa de R$ 5.00 aplicada). Novo saldo: "
+                        + String.format("%.2f", cont.getSaldo()));
+            } else {
+                System.out.println("Conta sem saldo disponível!");
+            }
         }
 
         System.out.println();
