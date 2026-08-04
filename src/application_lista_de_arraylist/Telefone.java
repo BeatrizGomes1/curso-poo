@@ -1,7 +1,6 @@
 package application_lista_de_arraylist;
 
 import entities_lista_de_arraylist.Contato;
-import entities_lista_de_arraylist.Contato;
 
 import java.util.ArrayList;
 import java.util.List;
