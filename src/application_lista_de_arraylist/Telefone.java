@@ -1,6 +1,7 @@
 package application_lista_de_arraylist;
 
 import entities_lista_de_arraylist.Contato;
+import entities_lista_de_arraylist.Contato;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +18,15 @@ public class Telefone {
         int n  = sc.nextInt();
 
         System.out.println();
-
+        sc.nextLine();
         for (int i = 0; i < n; i++) {
             System.out.println("ID: ");
             int id = sc.nextInt();
+            while (temId(list, id)) {
+                System.out.println("Id já cadastrado! Digite novamente: ");
+                id = sc.nextInt();
+            }
+            sc.nextLine();
             System.out.println("Nome: ");
             String nome = sc.next();
             System.out.println("Telefone: ");
@@ -29,7 +35,30 @@ public class Telefone {
             list.add(new Contato(id, nome, telefone));
         }
 
+        int resp;
+        do {
+
+            System.out.println("Digite uma opcao que deseja fazer : ");
+            System.out.println("1 - Buscar, 2 - Alterar, 3 - Remover, 4 - Listar, 5 - Sair");
+            resp = sc.nextInt();
+            if (resp == 1) {
+                System.out.println("Digite o nome do contato: ");
+                String nomeBusca = sc.nextLine();
+
+                Contato c =  list.stream().filter(x -> x.getNome().equals(nomeBusca))
+                        .findFirst().orElse(null);
+            }
+
+
+        } while (resp != 5);
+
         sc.close();
 
+    }
+
+    public static boolean temId(List<Contato> list, int id) {
+        Contato c =  list.stream().filter(x -> x.getId() == id)
+                .findFirst().orElse(null);
+        return c != null;
     }
 }
