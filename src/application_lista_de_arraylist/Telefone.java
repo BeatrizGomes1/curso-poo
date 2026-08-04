@@ -41,6 +41,7 @@ public class Telefone {
             System.out.println("Digite uma opcao que deseja fazer : ");
             System.out.println("1 - Buscar, 2 - Alterar, 3 - Remover, 4 - Listar, 5 - Sair");
             resp = sc.nextInt();
+            sc.nextLine();
             if (resp == 1) {
                 System.out.println("Digite o nome do contato: ");
                 String nomeBusca = sc.nextLine();
@@ -51,10 +52,20 @@ public class Telefone {
                 if  (c == null) {
                     System.out.println("Contato inexistente!");
                 } else {
-                    System.out.println("Id: " + c.getId() + "Nome: " + c.getNome() + "Telefone: " + c.getNumero());
+                    System.out.println("Id: " + c.getId() + ", Nome: " + c.getNome() + ", Telefone: " + c.getNumero());
                 }
             } else if (resp == 2) {
                 System.out.println("");
+            } else if (resp == 3) {
+
+            } else if  (resp == 4) {
+
+                for (Contato c : list) {
+                    System.out.println(c);
+                }
+
+            } else if (resp == 5) {
+
             }
 
 
