@@ -47,6 +47,14 @@ public class Telefone {
 
                 Contato c =  list.stream().filter(x -> x.getNome().equals(nomeBusca))
                         .findFirst().orElse(null);
+
+                if  (c == null) {
+                    System.out.println("Contato inexistente!");
+                } else {
+                    System.out.println("Id: " + c.getId() + "Nome: " + c.getNome() + "Telefone: " + c.getNumero());
+                }
+            } else if (resp == 2) {
+                System.out.println("");
             }
 
 
