@@ -27,9 +27,9 @@ public class Telefone {
             }
             sc.nextLine();
             System.out.println("Nome: ");
-            String nome = sc.next();
+            String nome = sc.nextLine();
             System.out.println("Telefone: ");
-            String telefone = sc.next();
+            String telefone = sc.nextLine();
 
             list.add(new Contato(id, nome, telefone));
         }
@@ -70,7 +70,7 @@ public class Telefone {
                     System.out.println("Novo número: ");
                     String numeroAlterado = sc.nextLine();
                     c.setNumero(numeroAlterado);
-                    System.out.println("Número do contatato: " + c.getNome() + ", alterado para: " + numeroAlterado);
+                    System.out.println("Número do contato: " + c.getNome() + ", alterado para: " + numeroAlterado);
                 }
 
             } else if (resp == 3) {
