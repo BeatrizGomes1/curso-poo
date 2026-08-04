@@ -43,6 +43,7 @@ public class Telefone {
             resp = sc.nextInt();
             sc.nextLine();
             if (resp == 1) {
+                System.out.println("--- LISTAR CONTATO ---");
                 System.out.println("Digite o nome do contato: ");
                 String nomeBusca = sc.nextLine();
 
@@ -55,7 +56,22 @@ public class Telefone {
                     System.out.println("Id: " + c.getId() + ", Nome: " + c.getNome() + ", Telefone: " + c.getNumero());
                 }
             } else if (resp == 2) {
-                System.out.println("");
+                System.out.println("--- ALTERAR TELEFONE ---");
+                System.out.println("Digite o número do contato: ");
+                String numeroMudar = sc.nextLine();
+
+                Contato c =  list.stream().filter(x -> x.getNumero().equals(numeroMudar))
+                        .findFirst().orElse(null);
+
+                if  (c == null) {
+                    System.out.println("Número não cadastrado!");
+                } else {
+                    System.out.println("Novo número: ");
+                    String numeroAlterado = sc.nextLine();
+                    c.setNumero(numeroAlterado);
+                    System.out.println("Número do contatato: " + c.getNome() + ", alterado para: " + numeroAlterado);
+                }
+
             } else if (resp == 3) {
 
             } else if  (resp == 4) {
