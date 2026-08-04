@@ -37,12 +37,13 @@ public class Telefone {
 
         int resp;
         do {
-
+            System.out.println();
             System.out.println("Digite uma opcao que deseja fazer : ");
             System.out.println("1 - Buscar, 2 - Alterar, 3 - Remover, 4 - Listar, 5 - Sair");
             resp = sc.nextInt();
             sc.nextLine();
             if (resp == 1) {
+                System.out.println();
                 System.out.println("--- LISTAR CONTATO ---");
                 System.out.println("Digite o nome do contato: ");
                 String nomeBusca = sc.nextLine();
@@ -56,6 +57,7 @@ public class Telefone {
                     System.out.println("Id: " + c.getId() + ", Nome: " + c.getNome() + ", Telefone: " + c.getNumero());
                 }
             } else if (resp == 2) {
+                System.out.println();
                 System.out.println("--- ALTERAR TELEFONE ---");
                 System.out.println("Digite o número do contato: ");
                 String numeroMudar = sc.nextLine();
@@ -73,17 +75,33 @@ public class Telefone {
                 }
 
             } else if (resp == 3) {
+                System.out.println();
+                System.out.println("--- REMOVER CONTATO ---");
+
+                System.out.println("Digite o número do contato: ");
+                String removerContato = sc.nextLine();
+
+                Contato c =  list.stream().filter(x -> x.getNumero().equals(removerContato))
+                        .findFirst().orElse(null);
+
+                if  (c == null) {
+                    System.out.println("Número não cadastrado!");
+                } else {
+                    list.remove(c);;
+                    System.out.println("Contato removido com sucesso!");
+                }
 
             } else if  (resp == 4) {
-
+                System.out.println();
+                System.out.println("--- LISTA DE CONTATOS ---");
                 for (Contato c : list) {
                     System.out.println(c);
                 }
 
             } else if (resp == 5) {
-
+                System.out.println();
+                System.out.println("Saindo da agenda...");
             }
-
 
         } while (resp != 5);
 
