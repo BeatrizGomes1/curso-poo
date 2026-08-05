@@ -107,6 +107,7 @@ public class Telefone {
         } while (resp != 5);
 
         sc.close();
+
     }
 
     public static boolean temId(List<Contato> list, int id) {
