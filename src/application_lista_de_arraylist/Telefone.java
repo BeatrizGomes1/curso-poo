@@ -62,6 +62,7 @@ public class Telefone {
                 System.out.println("Digite o número do contato: ");
                 String numeroMudar = sc.nextLine();
 
+                //Buscar numero do contato
                 Contato c =  list.stream().filter(x -> x.getNumero().equals(numeroMudar))
                         .findFirst().orElse(null);
 
