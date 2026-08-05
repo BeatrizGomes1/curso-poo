@@ -47,6 +47,7 @@ public class Telefone {
                 System.out.println("Digite o nome do contato: ");
                 String nomeBusca = sc.nextLine();
 
+                //Buscar nome do contato
                 Contato c =  list.stream().filter(x -> x.getNome().equals(nomeBusca))
                         .findFirst().orElse(null);
 
