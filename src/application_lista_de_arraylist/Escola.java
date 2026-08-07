@@ -47,7 +47,6 @@ public class Escola {
         Aluno a = list.stream().filter(x -> x.getMatricula() == matriculaPonto)
                         .findFirst().orElse(null);
 
-
         if (a == null) {
             System.out.println("Matrícula inexistente!");
         } else {
