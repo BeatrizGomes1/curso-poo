@@ -109,7 +109,6 @@ public class Telefone {
         sc.close();
 
     }
-
     //Verificar de id já foi digitado
     public static boolean temId(List<Contato> list, int id) {
         Contato c =  list.stream().filter(x -> x.getId() == id)
