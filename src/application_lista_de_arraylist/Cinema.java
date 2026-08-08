@@ -42,6 +42,7 @@ public class Cinema {
         System.out.println("Digite o ID do Filme: ");
         int comprarIngresso = sc.nextInt();
 
+        //Verificar ID
         Filme f = filme.stream().filter(x -> x.getId() == comprarIngresso)
                 .findFirst().orElse(null);
 
