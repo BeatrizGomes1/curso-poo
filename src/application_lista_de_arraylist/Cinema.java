@@ -58,6 +58,13 @@ public class Cinema {
             }
         }
 
+        System.out.println();
+
+        System.out.println("--- FILMES EM CARTAZ ---");
+        for (Filme f1 : filme) {
+            System.out.println(f1);
+        }
+
         sc.close();
 
     }
