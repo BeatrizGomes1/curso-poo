@@ -33,7 +33,7 @@ public class Filme {
     }
 
     public void vendaIngresso(int quant){
-        quantidade = quantidade - quant;
+        quantidade -= quant;
     }
 
     @Override
