@@ -33,11 +33,11 @@ public class Filme {
     }
 
     public void vendaIngresso(int quant){
-        quantidade =- quant;
+        quantidade = quantidade - quant;
     }
 
     @Override
     public String toString() {
-        return "ID: " + id + "|" + "Filme: " +  nome + "|" + "Quantidade: " + quantidade;
+        return "ID: " + id + " | " + "Filme: " +  nome + " | " + "Quantidade: " + quantidade;
     }
 }
