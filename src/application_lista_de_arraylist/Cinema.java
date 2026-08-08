@@ -50,11 +50,11 @@ public class Cinema {
         } else {
             System.out.println("Quantidade de ingressos: ");
             int quant = sc.nextInt();
-            if (quant >= 1){
+            if (quant >= 1 && quant <= f.getQuantidade()){
                 f.vendaIngresso(quant);
                 System.out.println("Venda realizada com sucesso! " + quant + " ingressos emitidos.");
             } else {
-                System.out.println("Ingressos esgotados!");
+                System.out.println("Ingressos esgotados ou assentos insuficientes para essa compra!");
             }
         }
 
