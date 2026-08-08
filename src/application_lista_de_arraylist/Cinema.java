@@ -69,6 +69,7 @@ public class Cinema {
 
     }
 
+    //Verificação de id
     public static boolean verificacaoId(List<Filme> list, int id){
         Filme f = list.stream().filter(x -> x.getId() == id)
                 .findFirst().orElse(null);
