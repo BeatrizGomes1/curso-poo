@@ -29,7 +29,7 @@ public class Cinema {
             }
             sc.nextLine();
             System.out.println("Nome: ");
-            String nome = sc.next();
+            String nome = sc.nextLine();
             System.out.println("Ingressos: ");
             int ingressos = sc.nextInt();
 
