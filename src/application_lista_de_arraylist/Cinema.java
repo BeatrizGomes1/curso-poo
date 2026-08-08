@@ -42,6 +42,21 @@ public class Cinema {
         System.out.println("Digite o ID do Filme: ");
         int comprarIngresso = sc.nextInt();
 
+        Filme f = filme.stream().filter(x -> x.getId() == comprarIngresso)
+                .findFirst().orElse(null);
+
+        if (f == null) {
+            System.out.println("ID não encontrado!");
+        } else {
+            System.out.println("Quantidade de ingressos: ");
+            int quant = sc.nextInt();
+            if (quant >= 1){
+                f.vendaIngresso(quant);
+                System.out.println("Venda realizada com sucesso! " + quant + " ingressos emitidos.");
+            } else {
+                System.out.println("Ingressos esgotados!");
+            }
+        }
 
         sc.close();
 
