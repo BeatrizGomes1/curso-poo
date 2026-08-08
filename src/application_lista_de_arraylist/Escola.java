@@ -68,6 +68,7 @@ public class Escola {
 
         sc.close();
     }
+
     public static boolean verificacaoMatricula(List<Aluno> list, int matricula){
         Aluno a = list.stream().filter(x -> x.getMatricula() == matricula)
                   .findFirst().orElse(null);
