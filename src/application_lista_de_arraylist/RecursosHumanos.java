@@ -71,7 +71,7 @@ public class RecursosHumanos {
                     System.out.println("Novo departamento: ");
                     String dep = sc.nextLine();
                     f.setCargo(dep);
-                    System.out.println("transferência realizada com sucesso para o departamento: " + f.getCargo());
+                    System.out.println("Transferência realizada com sucesso para o departamento: " + f.getCargo());
                 }
             } else if (resp == 4) {
                 System.out.println("--- RELATÓRIO DO FUNCIONÁRIO ---");
