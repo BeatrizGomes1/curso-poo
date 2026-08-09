@@ -18,11 +18,11 @@ public class RecursosHumanos {
         do {
 
             System.out.println("--- SISTEMA DE RECURSOS HUMANOS ---");
-            System.out.println("Opção 1 - Cadastrar novo funcionário: ");
-            System.out.println("Opção 2 - Aumentar salário: ");
-            System.out.println("Opção 3 - Mudança de departamento: ");
-            System.out.println("Opção 4 - Relatório do funcionário: ");
-            System.out.println("Opção 5 -Encerrar: ");
+            System.out.println("Opção 1 - Cadastrar novo funcionário ");
+            System.out.println("Opção 2 - Aumentar salário ");
+            System.out.println("Opção 3 - Mudança de departamento ");
+            System.out.println("Opção 4 - Relatório do funcionário ");
+            System.out.println("Opção 5 - Encerrar ");
             resp = sc.nextInt();
 
             if (resp == 1) {
