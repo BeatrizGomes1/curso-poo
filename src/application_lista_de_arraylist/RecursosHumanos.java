@@ -64,6 +64,7 @@ public class RecursosHumanos {
                 int idMudarSetor = sc.nextInt();
                 Funcionarios f = funcionarios.stream().filter(x -> x.getId() == idMudarSetor)
                         .findFirst().orElse(null);
+                sc.nextLine();
                 if (f == null) {
                     System.out.println("Id não encontrado!");
                 } else {
