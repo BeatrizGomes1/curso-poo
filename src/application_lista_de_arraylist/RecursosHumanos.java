@@ -57,7 +57,7 @@ public class RecursosHumanos {
                     System.out.println("Porcentagem de aumento: (%)");
                     double porcentagem = sc.nextDouble();
                     f.increaseSalary(porcentagem);
-                    System.out.println("Aumento de " + porcentagem + "% concedido! Novo salário: R$" + f.getSalario());
+                    System.out.println("Aumento de " + porcentagem + "% concedido! Novo salário: R$" + String.format("%.2f", f.getSalario()));
                 }
             } else if (resp == 3) {
                 System.out.println("ID do funcionário: ");
