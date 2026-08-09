@@ -68,8 +68,14 @@ public class RecursosHumanos {
                     String dep = sc.nextLine();
                     f.setCargo(dep);
                 }
+            } else if (resp == 4) {
+                System.out.println("--- RELATÓRIO DO FUNCIONÁRIO ---");
+                for (Funcionarios f : funcionarios) {
+                    System.out.println(f);
+                }
+            } else if (resp == 5) {
+                System.out.println("Encerrando sistema de RH. Até logo!");
             }
-
 
         } while (resp != 5);
 
