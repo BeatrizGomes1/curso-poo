@@ -16,6 +16,7 @@ public class RecursosHumanos {
         int resp;
         do {
 
+            System.out.println("--- SISTEMA DE RECURSOS HUMANOS ---");
             System.out.println("Opção 1 - Cadastrar novo funcionário: ");
             System.out.println("Opção 2 - Aumentar salário: ");
             System.out.println("Opção 3 - Mudança de departamento: ");
@@ -23,6 +24,23 @@ public class RecursosHumanos {
             System.out.println("Opção 5 -Encerrar: ");
             resp = sc.nextInt();
 
+            if (resp == 1) {
+                System.out.println("Id: ");
+                int id = sc.nextInt();
+                System.out.println("Nome: ");
+                String nome = sc.nextLine();
+                System.out.println("Salário: ");
+                double salario = sc.nextDouble();
+                System.out.println("Departamento: ");
+                String depto = sc.nextLine();
+                System.out.println("Funcionário cadastrado com sucesso!");
+
+                Funcionarios funcionario = new Funcionarios(id, nome, salario, depto);
+                funcionarios.add(funcionario);
+
+            } else if (resp == 2) {
+
+            }
 
 
         } while (resp != 5);
