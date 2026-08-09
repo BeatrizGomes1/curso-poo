@@ -1,5 +1,6 @@
 package application_lista_de_arraylist;
 
+import entities_lista_de_arraylist.Funcionario;
 import entities_lista_de_arraylist.Funcionarios;
 
 import java.util.ArrayList;
@@ -27,6 +28,11 @@ public class RecursosHumanos {
             if (resp == 1) {
                 System.out.println("Id: ");
                 int id = sc.nextInt();
+                while (verificacaoId(funcionarios, id)) {
+                    System.out.println("Id já cadastrado! Digite novamente: ");
+                    id = sc.nextInt();
+                }
+                sc.nextLine();
                 System.out.println("Nome: ");
                 String nome = sc.nextLine();
                 System.out.println("Salário: ");
@@ -39,12 +45,28 @@ public class RecursosHumanos {
                 funcionarios.add(funcionario);
 
             } else if (resp == 2) {
-
+                System.out.println("ID do funcionário: ");
+                int idMudarSalario = sc.nextInt();
+                Funcionarios f = funcionarios.stream().filter(x -> x.getId() == idMudarSalario)
+                        .findFirst().orElse(null);
+                if (f == null) {
+                    System.out.println("Id não encontrado!");
+                } else {
+                    System.out.println("Porcentagem de aumento: (%)");
+                    double porcentagem = sc.nextDouble();
+                    f.increaseSalary(porcentagem);
+                }
             }
 
 
         } while (resp != 5);
 
         sc.close();
+    }
+
+    public static boolean verificacaoId(List<Funcionarios> list, int id){
+        Funcionarios f = list.stream().filter(x -> x.getId() == id)
+                .findFirst().orElse(null);
+        return f != null;
     }
 }
