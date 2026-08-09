@@ -56,6 +56,18 @@ public class RecursosHumanos {
                     double porcentagem = sc.nextDouble();
                     f.increaseSalary(porcentagem);
                 }
+            } else if (resp == 3) {
+                System.out.println("ID do funcionário: ");
+                int idMudarSetor = sc.nextInt();
+                Funcionarios f = funcionarios.stream().filter(x -> x.getId() == idMudarSetor)
+                        .findFirst().orElse(null);
+                if (f == null) {
+                    System.out.println("Id não encontrado!");
+                } else {
+                    System.out.println("Novo departamento: ");
+                    String dep = sc.nextLine();
+                    f.setCargo(dep);
+                }
             }
 
 
