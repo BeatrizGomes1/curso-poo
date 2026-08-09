@@ -44,6 +44,7 @@ public class Funcionarios {
 
     @Override
     public String toString(){
-        return "[ID: " + id + "] " + "Nome: " + nome + " | " + "Depto: " + departamento + " | " + "Salario: R$" + salario;
+        return "[ID: " + id + "] " + "Nome: " + nome + " | " + "Depto: " + departamento + " | "
+                + "Salario: R$" + String.format("%.2f", salario);
     }
 }
