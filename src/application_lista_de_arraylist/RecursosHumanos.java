@@ -23,6 +23,7 @@ public class RecursosHumanos {
             System.out.println("Opção 3 - Mudança de departamento ");
             System.out.println("Opção 4 - Relatório do funcionário ");
             System.out.println("Opção 5 - Encerrar ");
+            System.out.println("Escolha uma opção: ");
             resp = sc.nextInt();
 
             if (resp == 1) {
@@ -37,6 +38,7 @@ public class RecursosHumanos {
                 String nome = sc.nextLine();
                 System.out.println("Salário: ");
                 double salario = sc.nextDouble();
+                sc.nextLine();
                 System.out.println("Departamento: ");
                 String depto = sc.nextLine();
                 System.out.println("Funcionário cadastrado com sucesso!");
@@ -55,6 +57,7 @@ public class RecursosHumanos {
                     System.out.println("Porcentagem de aumento: (%)");
                     double porcentagem = sc.nextDouble();
                     f.increaseSalary(porcentagem);
+                    System.out.println("Aumento de " + porcentagem + "% concedido! Novo salário: R$" + f.getSalario());
                 }
             } else if (resp == 3) {
                 System.out.println("ID do funcionário: ");
