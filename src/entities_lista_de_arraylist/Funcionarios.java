@@ -5,13 +5,13 @@ public class Funcionarios {
     private int id;
     private String nome;
     private double salario;
-    private String cargo;
+    private String departamento;
 
     public Funcionarios(int id, String nome, double salario, String cargo) {
         this.id = id;
         this.nome = nome;
         this.salario = salario;
-        this.cargo = cargo;
+        this.departamento = cargo;
     }
 
     public int getId() {
@@ -31,12 +31,19 @@ public class Funcionarios {
     }
 
     public String getCargo() {
-        return cargo;
+        return departamento;
     }
 
     public void setCargo(String cargo) {
-        this.cargo = cargo;
+        this.departamento = cargo;
     }
 
+    public void increaseSalary(double porcentagem) {
+        salario += (salario * (porcentagem / 100)) + salario;
+    }
 
+    @Override
+    public String toString(){
+        return "[ID: " + id + "] " + "Nome: " + nome + " | " + "Depto: " + departamento + " | " + "Salario: R$" + salario;
+    }
 }
