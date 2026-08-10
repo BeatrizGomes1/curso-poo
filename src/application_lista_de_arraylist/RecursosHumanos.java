@@ -1,6 +1,5 @@
 package application_lista_de_arraylist;
 
-import entities_lista_de_arraylist.Funcionario;
 import entities_lista_de_arraylist.Funcionarios;
 
 import java.util.ArrayList;
