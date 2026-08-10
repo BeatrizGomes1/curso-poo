@@ -63,6 +63,7 @@ public class Concessionaria {
 
     }
 
+    //Verificar id
     public static boolean verificacaoPlaca(List<Carro> list, String placa){
         Carro carro = list.stream().filter(x -> x.getPlaca().equals(placa))
                 .findFirst().orElse(null);
