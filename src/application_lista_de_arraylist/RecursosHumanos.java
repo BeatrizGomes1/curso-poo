@@ -29,6 +29,7 @@ public class RecursosHumanos {
             if (resp == 1) {
                 System.out.println("Id: ");
                 int id = sc.nextInt();
+
                 //Verifica se id já existe
                 while (verificacaoId(funcionarios, id)) {
                     System.out.println("Id já cadastrado! Digite novamente: ");
