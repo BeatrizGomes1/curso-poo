@@ -62,6 +62,7 @@ public class CadastroFuncionario {
 
     }
 
+    //Verificar id
     public static boolean verificacaoId(List<Funcionario> list, int id){
         Funcionario f = list.stream().filter(x -> x.getId() == id)
                 .findFirst().orElse(null);
