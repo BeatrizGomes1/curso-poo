@@ -87,6 +87,7 @@ public class RecursosHumanos {
         sc.close();
     }
 
+    //Verificação de ID
     public static boolean verificacaoId(List<Funcionarios> list, int id){
         Funcionarios f = list.stream().filter(x -> x.getId() == id)
                 .findFirst().orElse(null);
