@@ -1,6 +1,5 @@
 package application_lista_de_arraylist;
 
-import entities_lista_de_arraylist.Aluno;
 import entities_lista_de_arraylist.Carro;
 
 import java.util.ArrayList;
