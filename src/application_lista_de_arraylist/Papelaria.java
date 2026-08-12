@@ -70,9 +70,15 @@ public class Papelaria {
                 } else {
                     System.out.println("Nenhum produto encontrado!");
                 }
+            } if (resp == 4) {
+                for (Produto1 produto1 : produto) {
+                    System.out.println(produto1);
+                }
+            } if  (resp == 5) {
+                System.out.println("Encerrando...");
             }
 
-        } while (resp != 6);
+        } while (resp != 5);
 
         sc.close();
 
