@@ -6,5 +6,31 @@ public class Produto1 {
     private String nome;
     private int estoque;
 
+    public Produto1(int codigo, String nome, int estoque) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.estoque = estoque;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getEstoque() {
+        return estoque;
+    }
+
 
 }
