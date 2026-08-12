@@ -12,7 +12,7 @@ public class Papelaria {
         Scanner sc = new Scanner(System.in);
 
 
-        List<Produto1> produtos = new ArrayList<>();
+        List<Produto1> produto = new ArrayList<>();
 
 
 
