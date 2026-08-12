@@ -59,6 +59,8 @@ public class Papelaria {
                     System.out.println("Digite a quantidade do produto: ");
                     int quantidade = sc.nextInt();
                     p.entradaNoEstoque(quantidade);
+
+                    System.out.println("Novo estoque do produto: " + p.getNome() + ": " + p.getEstoque());
                 } else {
                     System.out.println("Nenhum produto encontrado!");
                 }
@@ -78,6 +80,7 @@ public class Papelaria {
                     } else {
                         pr.saidaNoEstoque(quantidadeVenda);
                         System.out.println("Venda concluída!");
+                        System.out.println("Novo estoque do produto: " + pr.getNome() + ": " + pr.getEstoque());
                     }
 
                 } else {
