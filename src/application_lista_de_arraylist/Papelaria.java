@@ -70,7 +70,6 @@ public class Papelaria {
                 } else {
                     System.out.println("Nenhum produto encontrado!");
                 }
-
             }
 
         } while (resp != 6);
