@@ -59,8 +59,17 @@ public class Papelaria {
                 System.out.println("Digite o código do produto: ");
                 int codigoProdutoVenda = sc.nextInt();
 
-                Produto1 p =  produto.stream().filter(x -> x.getCodigo() == codigoProdutoVenda)
+                Produto1 pr =  produto.stream().filter(x -> x.getCodigo() == codigoProdutoVenda)
                         .findFirst().orElse(null);
+
+                if (pr != null) {
+                    System.out.println("Digite a quantidade para venda: ");
+                    int quantidadeVenda = sc.nextInt();
+                    pr.saidaNoEstoque(quantidadeVenda);
+
+                } else {
+                    System.out.println("Nenhum produto encontrado!");
+                }
 
             }
 
