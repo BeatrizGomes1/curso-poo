@@ -39,4 +39,9 @@ public class Produto1 {
     public void saidaNoEstoque(int saida) {
         estoque += saida;
     }
+
+    @Override
+    public String toString() {
+        return codigo + " - " + nome + " - " + estoque;
+    }
 }
