@@ -32,5 +32,11 @@ public class Produto1 {
         return estoque;
     }
 
+    public void entradaNoEstoque(int entrada) {
+        estoque += entrada;
+    }
 
+    public void saidaNoEstoque(int saida) {
+        estoque += saida;
+    }
 }
