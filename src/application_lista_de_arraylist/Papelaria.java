@@ -1,5 +1,6 @@
 package application_lista_de_arraylist;
 
+import entities_lista_de_arraylist.Livro;
 import entities_lista_de_arraylist.Produto1;
 
 import java.util.ArrayList;
@@ -28,6 +29,11 @@ public class Papelaria {
             if (resp == 1) {
                 System.out.println("Digite o código do produto: ");
                 int codigo = sc.nextInt();
+                while (temCodigo(produto, codigo)) {
+                    System.out.println("Código já cadastrado! Digite novamente: ");
+                    codigo = sc.nextInt();
+                }
+                sc.nextLine();
                 System.out.println("Digite o nome do produto: ");
                 String nome = sc.nextLine();
                 System.out.println("Digite a quantidade do produto: ");
@@ -36,6 +42,25 @@ public class Papelaria {
                 Produto1 produto1 = new Produto1(codigo, nome, quantidade);
                 produto.add(produto1);
             } if (resp == 2) {
+                System.out.println("Digite o código do produto: ");
+                int codigoProduto = sc.nextInt();
+
+                Produto1 p =  produto.stream().filter(x -> x.getCodigo() == codigoProduto)
+                        .findFirst().orElse(null);
+
+                if (p != null) {
+                    System.out.println("Digite a quantidade do produto: ");
+                    int quantidade = sc.nextInt();
+                    p.entradaNoEstoque(quantidade);
+                } else {
+                    System.out.println("Nenhum produto encontrado!");
+                }
+            } if (resp == 3) {
+                System.out.println("Digite o código do produto: ");
+                int codigoProdutoVenda = sc.nextInt();
+
+                Produto1 p =  produto.stream().filter(x -> x.getCodigo() == codigoProdutoVenda)
+                        .findFirst().orElse(null);
 
             }
 
@@ -45,4 +70,9 @@ public class Papelaria {
 
     }
 
+    public static boolean temCodigo(List<Produto1> list, int codigo) {
+        Produto1 p =  list.stream().filter(x -> x.getCodigo() == codigo)
+                .findFirst().orElse(null);
+        return p != null;
+    }
 }
