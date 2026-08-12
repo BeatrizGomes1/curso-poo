@@ -37,7 +37,7 @@ public class Produto1 {
     }
 
     public void saidaNoEstoque(int saida) {
-        estoque += saida;
+        estoque -= saida;
     }
 
     @Override
