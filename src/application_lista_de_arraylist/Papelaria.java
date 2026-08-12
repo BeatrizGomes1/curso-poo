@@ -27,20 +27,26 @@ public class Papelaria {
             resp = sc.nextInt();
 
             if (resp == 1) {
-                System.out.println("Digite o código do produto: ");
-                int codigo = sc.nextInt();
-                while (temCodigo(produto, codigo)) {
-                    System.out.println("Código já cadastrado! Digite novamente: ");
-                    codigo = sc.nextInt();
-                }
-                sc.nextLine();
-                System.out.println("Digite o nome do produto: ");
-                String nome = sc.nextLine();
-                System.out.println("Digite a quantidade do produto: ");
-                int quantidade = sc.nextInt();
+                System.out.println("Digite a quantidade de produtos a ser adicionada: ");
+                int n  = sc.nextInt();
 
-                Produto1 produto1 = new Produto1(codigo, nome, quantidade);
-                produto.add(produto1);
+                sc.nextLine();
+                for (int i = 0; i < n; i++) {
+                    System.out.println("Digite o código do produto: ");
+                    int codigo = sc.nextInt();
+                    while (temCodigo(produto, codigo)) {
+                        System.out.println("Código já cadastrado! Digite novamente: ");
+                        codigo = sc.nextInt();
+                    }
+                    sc.nextLine();
+                    System.out.println("Digite o nome do produto: ");
+                    String nome = sc.nextLine();
+                    System.out.println("Digite a quantidade do produto: ");
+                    int quantidade = sc.nextInt();
+
+                    Produto1 produto1 = new Produto1(codigo, nome, quantidade);
+                    produto.add(produto1);
+                }
             } if (resp == 2) {
                 System.out.println("Digite o código do produto: ");
                 int codigoProduto = sc.nextInt();
