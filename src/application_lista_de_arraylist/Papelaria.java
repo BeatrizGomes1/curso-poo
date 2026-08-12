@@ -11,10 +11,7 @@ public class Papelaria {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-
         List<Produto1> produto = new ArrayList<>();
-
-
 
 
 
