@@ -48,6 +48,7 @@ public class Papelaria {
                     produto.add(produto1);
                 }
             } if (resp == 2) {
+                System.out.println();
                 System.out.println("Digite o código do produto: ");
                 int codigoProduto = sc.nextInt();
 
@@ -62,6 +63,7 @@ public class Papelaria {
                     System.out.println("Nenhum produto encontrado!");
                 }
             } if (resp == 3) {
+                System.out.println();
                 System.out.println("Digite o código do produto: ");
                 int codigoProdutoVenda = sc.nextInt();
 
@@ -71,12 +73,18 @@ public class Papelaria {
                 if (pr != null) {
                     System.out.println("Digite a quantidade para venda: ");
                     int quantidadeVenda = sc.nextInt();
-                    pr.saidaNoEstoque(quantidadeVenda);
+                    if (quantidadeVenda > pr.getEstoque()) {
+                        System.out.println("Produto sem estoque!");
+                    } else {
+                        pr.saidaNoEstoque(quantidadeVenda);
+                        System.out.println("Venda concluída!");
+                    }
 
                 } else {
                     System.out.println("Nenhum produto encontrado!");
                 }
             } if (resp == 4) {
+                System.out.println();
                 for (Produto1 produto1 : produto) {
                     System.out.println(produto1);
                 }
