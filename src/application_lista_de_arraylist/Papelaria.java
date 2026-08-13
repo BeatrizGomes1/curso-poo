@@ -100,6 +100,7 @@ public class Papelaria {
         sc.close();
 
     }
+
     //Verificar se código já esta cadastrado
     public static boolean temCodigo(List<Produto1> list, int codigo) {
         Produto1 p =  list.stream().filter(x -> x.getCodigo() == codigo)
