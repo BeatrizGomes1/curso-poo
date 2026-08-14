@@ -25,6 +25,7 @@ public class Livro {
         if  (at == null) {
             System.out.println("Autor não encontrado!");
         } else {
+            System.out.println("--- INFORMAÇÕES ---");
             for(Autor autor : autores) {
                 System.out.println(at);
             }
