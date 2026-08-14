@@ -13,8 +13,13 @@ public class Livro {
 
         List<Autor> autores = new ArrayList<>();
 
-        Autor a = new Autor (123, "Harry Potter", "JK", 45);
+        Autor a = new Autor (123, "Harry Potter", "JK", 45.99);
+        Autor b = new Autor (456, "Dom Quixote", "Miguel de Cervantes", 55.99);
+        Autor c = new Autor (789, "1984", "George Orwell", 38.99);
+
         autores.add(a);
+        autores.add(b);
+        autores.add(c);
 
         System.out.println("Digite o nome do autor: ");
         String nome = sc.nextLine();
@@ -26,9 +31,8 @@ public class Livro {
             System.out.println("Autor não encontrado!");
         } else {
             System.out.println("--- INFORMAÇÕES ---");
-            for(Autor autor : autores) {
-                System.out.println(at);
-            }
+
+            System.out.println(at);
         }
 
         sc.close();
