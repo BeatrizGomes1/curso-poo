@@ -49,8 +49,8 @@ public class Autor {
     @Override
     public String toString() {
         return "Código do livro: " + isbn
-                + " Título: " + titulo
-                + " Autor: " + autor
-                + " Preço " + String.format("%.2f", preco);
+                + " | Título: " + titulo
+                + " | Autor: " + autor
+                + " | Preço " + String.format("%.2f", preco);
     }
 }
