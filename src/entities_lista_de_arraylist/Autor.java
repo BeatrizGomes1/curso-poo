@@ -45,4 +45,9 @@ public class Autor {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    @Override
+    public String toString() {
+        return isbn + " " + titulo + " " + autor + " " + preco;
+    }
 }
