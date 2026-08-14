@@ -16,6 +16,12 @@ public class Livro {
         Autor a = new Autor (123, "Harry Potter", "JK", 45);
         autores.add(a);
 
+        System.out.println("Digite o nome do autor: ");
+        String nome = sc.nextLine();
+
+        Autor at = autores.stream().filter(x -> x.getAutor().equals(nome))
+                .findFirst().orElse(null);
+
 
 
         sc.close();
