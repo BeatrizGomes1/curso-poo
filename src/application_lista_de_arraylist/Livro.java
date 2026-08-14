@@ -22,7 +22,13 @@ public class Livro {
         Autor at = autores.stream().filter(x -> x.getAutor().equals(nome))
                 .findFirst().orElse(null);
 
-
+        if  (at == null) {
+            System.out.println("Autor não encontrado!");
+        } else {
+            for(Autor autor : autores) {
+                System.out.println(autor);
+            }
+        }
 
         sc.close();
 
