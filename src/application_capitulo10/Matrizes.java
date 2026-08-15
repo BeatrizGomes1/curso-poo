@@ -11,7 +11,7 @@ public class Matrizes {
         int n = sc.nextInt();
         int [][] matriz = new int[n][n];
 
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < matriz.length; i++){
             for(int j = 0; j < n; j++){
                 matriz[i][j] = sc.nextInt();
             }
