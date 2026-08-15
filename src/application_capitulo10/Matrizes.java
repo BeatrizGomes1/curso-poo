@@ -17,6 +17,12 @@ public class Matrizes {
             }
         }
 
+        System.out.println("Main diagonal: ");
+        for(int i = 0; i < n; i++){
+            System.out.print(matriz[i][i] + " ");
+        }
+
+
         sc.close();
     }
 }
